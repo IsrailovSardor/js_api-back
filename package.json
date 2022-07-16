@@ -1,0 +1,29 @@
+{
+  "name": "books",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "start": "webpack-dev-server --config webpack.config.js --mode=development --open"
+  },
+  "devDependencies": {
+    "@webdiscus/pug-loader": "^2.6.6",
+    "axios": "^0.27.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "resolve-url-loader": "^5.0.0",
+    "sass-loader": "^13.0.2",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.2"
+  },
+  "dependencies": {
+    "sass": "^1.53.0"
+  }
+}

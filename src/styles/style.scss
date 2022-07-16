@@ -1,0 +1,15 @@
+@import './login.scss';
+@import './book.scss';
+@import './description.scss';
+@import './create.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body {
+  position: relative;
+  background-color: #28353e;
+}
