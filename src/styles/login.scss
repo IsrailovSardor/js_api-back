@@ -68,7 +68,7 @@
             padding: 80px 0;
             border-left: 2px solid gray;
 
-            .login__form {
+            .login__form, .signin__form {
                 display: flex;
                 margin: auto;
                 align-items: center;
@@ -108,6 +108,18 @@
                         background: rgb(76, 145, 76);
                     }
                 }
+                .login__text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    p {
+                        color: gray;
+                        font-size: 20px;
+                    }
+                }
+            }
+            .signin__form{
+                display: none;
             }
         }
     }
