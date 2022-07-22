@@ -1,3 +1,4 @@
+import onClickFavorites from "./addFavorites";
 import { editBook } from "./editBooks";
 
 export function renderMoreInform(bookInform) {
@@ -12,5 +13,6 @@ export function renderMoreInform(bookInform) {
       document.querySelector(`.${key}`).textContent = bookInform[key];
     }
   }
+  onClickFavorites()
   editBook(bookInform)
 }

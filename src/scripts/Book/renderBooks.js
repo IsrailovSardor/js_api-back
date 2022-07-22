@@ -1,6 +1,5 @@
 import onClickFavorites from './addFavorites';
 import { getMoreInform } from './getRequests'
-let editID   
 function renderBooks(books, token) {
     const books__items = document.querySelector(".book__items");
     books.forEach((element) => {
