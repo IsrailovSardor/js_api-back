@@ -10,6 +10,11 @@
 </head>
 
 <body>
+    <div class="loader">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_wukqhhrq.json" background="transparent"
+            speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+    </div>
     <section class="login__page">
         <div class="container">
             <div class="logo">
@@ -29,238 +34,34 @@
                     <input type="text" placeholder="password" id="password" required>
                     <button id="login">LOGIN</button>
                     <div class="login__text">
-                        <p class="warning-usersData-error"></p>
+                        <p class="warning-login"></p>
                         <p class="modeSign">SingIn</p>
                     </div>
                 </form>
                 <form class="signin__form">
                     <input type="text" placeholder="login" id="loginSign" required>
+                    <input type="text" placeholder="firstName" id="firstName" required>
+                    <input type="text" placeholder="age" id="ageSign" required>
                     <input type="text" placeholder="password" id="passwordSign" required>
-                    <input type="text" placeholder="password" id="passwordTwoSign" required>
+                    <input type="text" placeholder="password too" id="passwrodTooSign" required>
+                    <span class="error-password"></span>
                     <button id="register">REGISTER</button>
                     <div class="login__text">
-                        <p class="warning-usersData-error"></p>
+                        <p class="warning-sign"></p>
                         <p class="modeLogin">Login</p>
                     </div>
                 </form>
             </div>
         </div>
     </section>
-     <section class="book__page">
+    <section class="book__page">
         <div class="user">
             <p class="text__user"></p>
-            <button>Выйти</button>
+            <button class="logout">Выйти</button>
         </div>
         <div class="container">
-            <span class="book__list" id="book">Book list</span>
+            <span class="book__list">Book list</span>
             <div class="book__items">
-                <div class="item">
-                    <div class="block__text">
-                        <p class="item__title">Гарри Поттер</p>
-                        <p class="item__descr">Автор: <span>
-                                Джоан Ро2222улинг
-                            </span>
-                        </p>
-                    </div>
-                    <div class="block__items">
-                        <div class="favorite">
-                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M19.3762 2.5401C18.5386 0.825205 16.1258 -0.577889 13.3191 0.239024C11.9779 0.625491 10.8078 1.45428 9.99986 2.58999C9.19192 1.45428 8.02178 0.625491 6.68062 0.239024C3.86771 -0.565417 1.46111 0.825205 0.623483 2.5401C-0.55169 4.94095 -0.0641182 7.64113 2.0737 10.5658C3.74894 12.8544 6.14304 15.1742 9.61856 17.8681C9.72839 17.9536 9.86369 18 10.003 18C10.1423 18 10.2776 17.9536 10.3874 17.8681C13.8567 15.1804 16.257 12.8793 17.9323 10.5658C20.0638 7.64113 20.5514 4.94095 19.3762 2.5401Z" />
-                            </svg>
-                        </div>
-                        <div class="trash">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M19.1667 3.6H15.8333V1.6C15.8333 0.7175 15.0859 0 14.1667 0H5.83333C4.91406 0 4.16667 0.7175 4.16667 1.6V3.6H0.833333C0.372396 3.6 0 3.9575 0 4.4V5.2C0 5.31 0.09375 5.4 0.208333 5.4H1.78125L2.42448 18.475C2.46615 19.3275 3.20052 20 4.08854 20H15.9115C16.8021 20 17.5339 19.33 17.5755 18.475L18.2187 5.4H19.7917C19.9062 5.4 20 5.31 20 5.2V4.4C20 3.9575 19.6276 3.6 19.1667 3.6ZM13.9583 3.6H6.04167V1.8H13.9583V3.6Z" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="block__text">
-                        <p class="item__title">Гарри Поттер</p>
-                        <p class="item__descr">Автор: <span>
-                                Джоан Ро2222улинг
-                            </span>
-                        </p>
-                    </div>
-                    <div class="block__items">
-
-                        <div class="favorite">
-                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M19.3762 2.5401C18.5386 0.825205 16.1258 -0.577889 13.3191 0.239024C11.9779 0.625491 10.8078 1.45428 9.99986 2.58999C9.19192 1.45428 8.02178 0.625491 6.68062 0.239024C3.86771 -0.565417 1.46111 0.825205 0.623483 2.5401C-0.55169 4.94095 -0.0641182 7.64113 2.0737 10.5658C3.74894 12.8544 6.14304 15.1742 9.61856 17.8681C9.72839 17.9536 9.86369 18 10.003 18C10.1423 18 10.2776 17.9536 10.3874 17.8681C13.8567 15.1804 16.257 12.8793 17.9323 10.5658C20.0638 7.64113 20.5514 4.94095 19.3762 2.5401Z" />
-                            </svg>
-                        </div>
-                        <div class="trash">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M19.1667 3.6H15.8333V1.6C15.8333 0.7175 15.0859 0 14.1667 0H5.83333C4.91406 0 4.16667 0.7175 4.16667 1.6V3.6H0.833333C0.372396 3.6 0 3.9575 0 4.4V5.2C0 5.31 0.09375 5.4 0.208333 5.4H1.78125L2.42448 18.475C2.46615 19.3275 3.20052 20 4.08854 20H15.9115C16.8021 20 17.5339 19.33 17.5755 18.475L18.2187 5.4H19.7917C19.9062 5.4 20 5.31 20 5.2V4.4C20 3.9575 19.6276 3.6 19.1667 3.6ZM13.9583 3.6H6.04167V1.8H13.9583V3.6Z" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="block__text">
-                        <p class="item__title">Гарри Поттер</p>
-                        <p class="item__descr">Автор: <span>
-                                Джоан Ро2222улинг
-                            </span>
-                        </p>
-                    </div>
-                    <div class="block__items">
-
-                        <div class="favorite">
-                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M19.3762 2.5401C18.5386 0.825205 16.1258 -0.577889 13.3191 0.239024C11.9779 0.625491 10.8078 1.45428 9.99986 2.58999C9.19192 1.45428 8.02178 0.625491 6.68062 0.239024C3.86771 -0.565417 1.46111 0.825205 0.623483 2.5401C-0.55169 4.94095 -0.0641182 7.64113 2.0737 10.5658C3.74894 12.8544 6.14304 15.1742 9.61856 17.8681C9.72839 17.9536 9.86369 18 10.003 18C10.1423 18 10.2776 17.9536 10.3874 17.8681C13.8567 15.1804 16.257 12.8793 17.9323 10.5658C20.0638 7.64113 20.5514 4.94095 19.3762 2.5401Z" />
-                            </svg>
-                        </div>
-                        <div class="trash">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M19.1667 3.6H15.8333V1.6C15.8333 0.7175 15.0859 0 14.1667 0H5.83333C4.91406 0 4.16667 0.7175 4.16667 1.6V3.6H0.833333C0.372396 3.6 0 3.9575 0 4.4V5.2C0 5.31 0.09375 5.4 0.208333 5.4H1.78125L2.42448 18.475C2.46615 19.3275 3.20052 20 4.08854 20H15.9115C16.8021 20 17.5339 19.33 17.5755 18.475L18.2187 5.4H19.7917C19.9062 5.4 20 5.31 20 5.2V4.4C20 3.9575 19.6276 3.6 19.1667 3.6ZM13.9583 3.6H6.04167V1.8H13.9583V3.6Z" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="block__text">
-                        <p class="item__title">Гарри Поттер</p>
-                        <p class="item__descr">Автор: <span>
-                                Джоан Ро2222улинг
-                            </span>
-                        </p>
-                    </div>
-                    <div class="block__items">
-
-                        <div class="favorite">
-                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M19.3762 2.5401C18.5386 0.825205 16.1258 -0.577889 13.3191 0.239024C11.9779 0.625491 10.8078 1.45428 9.99986 2.58999C9.19192 1.45428 8.02178 0.625491 6.68062 0.239024C3.86771 -0.565417 1.46111 0.825205 0.623483 2.5401C-0.55169 4.94095 -0.0641182 7.64113 2.0737 10.5658C3.74894 12.8544 6.14304 15.1742 9.61856 17.8681C9.72839 17.9536 9.86369 18 10.003 18C10.1423 18 10.2776 17.9536 10.3874 17.8681C13.8567 15.1804 16.257 12.8793 17.9323 10.5658C20.0638 7.64113 20.5514 4.94095 19.3762 2.5401Z" />
-                            </svg>
-                        </div>
-                        <div class="trash">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M19.1667 3.6H15.8333V1.6C15.8333 0.7175 15.0859 0 14.1667 0H5.83333C4.91406 0 4.16667 0.7175 4.16667 1.6V3.6H0.833333C0.372396 3.6 0 3.9575 0 4.4V5.2C0 5.31 0.09375 5.4 0.208333 5.4H1.78125L2.42448 18.475C2.46615 19.3275 3.20052 20 4.08854 20H15.9115C16.8021 20 17.5339 19.33 17.5755 18.475L18.2187 5.4H19.7917C19.9062 5.4 20 5.31 20 5.2V4.4C20 3.9575 19.6276 3.6 19.1667 3.6ZM13.9583 3.6H6.04167V1.8H13.9583V3.6Z" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="block__text">
-                        <p class="item__title">Гарри Поттер</p>
-                        <p class="item__descr">Автор: <span>
-                                Джоан Ро2222улинг
-                            </span>
-                        </p>
-                    </div>
-                    <div class="block__items">
-
-                        <div class="favorite">
-                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M19.3762 2.5401C18.5386 0.825205 16.1258 -0.577889 13.3191 0.239024C11.9779 0.625491 10.8078 1.45428 9.99986 2.58999C9.19192 1.45428 8.02178 0.625491 6.68062 0.239024C3.86771 -0.565417 1.46111 0.825205 0.623483 2.5401C-0.55169 4.94095 -0.0641182 7.64113 2.0737 10.5658C3.74894 12.8544 6.14304 15.1742 9.61856 17.8681C9.72839 17.9536 9.86369 18 10.003 18C10.1423 18 10.2776 17.9536 10.3874 17.8681C13.8567 15.1804 16.257 12.8793 17.9323 10.5658C20.0638 7.64113 20.5514 4.94095 19.3762 2.5401Z" />
-                            </svg>
-                        </div>
-                        <div class="trash">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M19.1667 3.6H15.8333V1.6C15.8333 0.7175 15.0859 0 14.1667 0H5.83333C4.91406 0 4.16667 0.7175 4.16667 1.6V3.6H0.833333C0.372396 3.6 0 3.9575 0 4.4V5.2C0 5.31 0.09375 5.4 0.208333 5.4H1.78125L2.42448 18.475C2.46615 19.3275 3.20052 20 4.08854 20H15.9115C16.8021 20 17.5339 19.33 17.5755 18.475L18.2187 5.4H19.7917C19.9062 5.4 20 5.31 20 5.2V4.4C20 3.9575 19.6276 3.6 19.1667 3.6ZM13.9583 3.6H6.04167V1.8H13.9583V3.6Z" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="block__text">
-                        <p class="item__title">Гарри Поттер</p>
-                        <p class="item__descr">Автор: <span>
-                                Джоан Ро2222улинг
-                            </span>
-                        </p>
-                    </div>
-                    <div class="block__items">
-
-                        <div class="favorite">
-                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M19.3762 2.5401C18.5386 0.825205 16.1258 -0.577889 13.3191 0.239024C11.9779 0.625491 10.8078 1.45428 9.99986 2.58999C9.19192 1.45428 8.02178 0.625491 6.68062 0.239024C3.86771 -0.565417 1.46111 0.825205 0.623483 2.5401C-0.55169 4.94095 -0.0641182 7.64113 2.0737 10.5658C3.74894 12.8544 6.14304 15.1742 9.61856 17.8681C9.72839 17.9536 9.86369 18 10.003 18C10.1423 18 10.2776 17.9536 10.3874 17.8681C13.8567 15.1804 16.257 12.8793 17.9323 10.5658C20.0638 7.64113 20.5514 4.94095 19.3762 2.5401Z" />
-                            </svg>
-                        </div>
-                        <div class="trash">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M19.1667 3.6H15.8333V1.6C15.8333 0.7175 15.0859 0 14.1667 0H5.83333C4.91406 0 4.16667 0.7175 4.16667 1.6V3.6H0.833333C0.372396 3.6 0 3.9575 0 4.4V5.2C0 5.31 0.09375 5.4 0.208333 5.4H1.78125L2.42448 18.475C2.46615 19.3275 3.20052 20 4.08854 20H15.9115C16.8021 20 17.5339 19.33 17.5755 18.475L18.2187 5.4H19.7917C19.9062 5.4 20 5.31 20 5.2V4.4C20 3.9575 19.6276 3.6 19.1667 3.6ZM13.9583 3.6H6.04167V1.8H13.9583V3.6Z" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="block__text">
-                        <p class="item__title">Гарри Поттер</p>
-                        <p class="item__descr">Автор: <span>
-                                Джоан Ро2222улинг
-                            </span>
-                        </p>
-                    </div>
-                    <div class="block__items">
-
-                        <div class="favorite">
-                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M19.3762 2.5401C18.5386 0.825205 16.1258 -0.577889 13.3191 0.239024C11.9779 0.625491 10.8078 1.45428 9.99986 2.58999C9.19192 1.45428 8.02178 0.625491 6.68062 0.239024C3.86771 -0.565417 1.46111 0.825205 0.623483 2.5401C-0.55169 4.94095 -0.0641182 7.64113 2.0737 10.5658C3.74894 12.8544 6.14304 15.1742 9.61856 17.8681C9.72839 17.9536 9.86369 18 10.003 18C10.1423 18 10.2776 17.9536 10.3874 17.8681C13.8567 15.1804 16.257 12.8793 17.9323 10.5658C20.0638 7.64113 20.5514 4.94095 19.3762 2.5401Z" />
-                            </svg>
-                        </div>
-                        <div class="trash">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M19.1667 3.6H15.8333V1.6C15.8333 0.7175 15.0859 0 14.1667 0H5.83333C4.91406 0 4.16667 0.7175 4.16667 1.6V3.6H0.833333C0.372396 3.6 0 3.9575 0 4.4V5.2C0 5.31 0.09375 5.4 0.208333 5.4H1.78125L2.42448 18.475C2.46615 19.3275 3.20052 20 4.08854 20H15.9115C16.8021 20 17.5339 19.33 17.5755 18.475L18.2187 5.4H19.7917C19.9062 5.4 20 5.31 20 5.2V4.4C20 3.9575 19.6276 3.6 19.1667 3.6ZM13.9583 3.6H6.04167V1.8H13.9583V3.6Z" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="block__text">
-                        <p class="item__title">Гарри Поттер</p>
-                        <p class="item__descr">Автор: <span>
-                                Джоан Ро2222улинг
-                            </span>
-                        </p>
-                    </div>
-                    <div class="block__items">
-
-                        <div class="favorite">
-                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M19.3762 2.5401C18.5386 0.825205 16.1258 -0.577889 13.3191 0.239024C11.9779 0.625491 10.8078 1.45428 9.99986 2.58999C9.19192 1.45428 8.02178 0.625491 6.68062 0.239024C3.86771 -0.565417 1.46111 0.825205 0.623483 2.5401C-0.55169 4.94095 -0.0641182 7.64113 2.0737 10.5658C3.74894 12.8544 6.14304 15.1742 9.61856 17.8681C9.72839 17.9536 9.86369 18 10.003 18C10.1423 18 10.2776 17.9536 10.3874 17.8681C13.8567 15.1804 16.257 12.8793 17.9323 10.5658C20.0638 7.64113 20.5514 4.94095 19.3762 2.5401Z" />
-                            </svg>
-                        </div>
-                        <div class="trash">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M19.1667 3.6H15.8333V1.6C15.8333 0.7175 15.0859 0 14.1667 0H5.83333C4.91406 0 4.16667 0.7175 4.16667 1.6V3.6H0.833333C0.372396 3.6 0 3.9575 0 4.4V5.2C0 5.31 0.09375 5.4 0.208333 5.4H1.78125L2.42448 18.475C2.46615 19.3275 3.20052 20 4.08854 20H15.9115C16.8021 20 17.5339 19.33 17.5755 18.475L18.2187 5.4H19.7917C19.9062 5.4 20 5.31 20 5.2V4.4C20 3.9575 19.6276 3.6 19.1667 3.6ZM13.9583 3.6H6.04167V1.8H13.9583V3.6Z" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
             </div>
             <button id="btn__create">Добавить книгу</button>
         </div>
@@ -268,7 +69,7 @@
     <section class="description__book">
         <div class="user">
             <p class="text__user"></p>
-            <button>Выйти</button>
+            <button class="logout">Выйти</button>
         </div>
         <div class="container">
             <div class="block__title">
@@ -277,36 +78,23 @@
             </div>
             <div class="block__deacr">
                 <div class="block__deacr-title">
-                    <p>Гарри Поттер и Философский камень</p>
-                    <p class="title-author">Джоан Роулинг</p>
+                    <p class="name"></p>
+                    <p class="title-author author"></p>
                 </div>
                 <div class="block__deacr-descr">
-                    <p>Издательтсво: <span>
-                            Росмэн
-                        </span>
-                    </p>
-                    <p>Язык оригинала:<span>
-                            Английский
-                        </span> </p>
-                    <p>Год издания:<span>
-                            1997
-                        </span> </p>
-                    <p>Кол-во страниц: <span>
-                            399
-                        </span></p>
-                    <p>Жанры: <span>
-                            Приключения, драмма
-                        </span></p>
+                    <p>Язык оригинала:<span class="originalLanguage"></span></p>
+                    <p>Год издания:<span class="publishYear"></span></p>
+                    <p>Кол-во страниц:<span class="pagesNumber"></span></p>
+                    <p>Жанры:<span class="genres"></span></p>
+                    <p>Издательство:<span class="publishHouse"></span></p>
+                    <span class="id"></span>
+                    <span class="isFavorite"></span>
                 </div>
                 <div class="block__descr-btns">
                     <button class="btn__add">
                         Редактировать
                     </button>
-                    <div class="favorite">
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M19.3762 2.5401C18.5386 0.825205 16.1258 -0.577889 13.3191 0.239024C11.9779 0.625491 10.8078 1.45428 9.99986 2.58999C9.19192 1.45428 8.02178 0.625491 6.68062 0.239024C3.86771 -0.565417 1.46111 0.825205 0.623483 2.5401C-0.55169 4.94095 -0.0641182 7.64113 2.0737 10.5658C3.74894 12.8544 6.14304 15.1742 9.61856 17.8681C9.72839 17.9536 9.86369 18 10.003 18C10.1423 18 10.2776 17.9536 10.3874 17.8681C13.8567 15.1804 16.257 12.8793 17.9323 10.5658C20.0638 7.64113 20.5514 4.94095 19.3762 2.5401Z" />
-                        </svg>
+                    <div class="favorite_icon">
                     </div>
                     <div class="trash">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -319,38 +107,50 @@
         </div>
     </section>
     <section class="create__page">
+        <button id="create_btn">back</button>
         <div class="container">
             <div class="block__create">
                 <p>Create book</p>
-                <div class="block__inputs">
-                    <input type="text" placeholder="Autor">
-                    <input type="text" placeholder="Name">
-                    <input type="text" placeholder="Description">
-                    <input type="text" placeholder="Year">
-                    <input type="text" placeholder="Genres">
-                    <button>Сохранить</button>
-                </div>
+                <form class="block__inputs">
+                    <input class="input__value" type="text" placeholder="Название" required name="name">
+                    <input class="input__value" type="text" placeholder="Автор" required name="author">
+                    <input class="input__value" type="number" placeholder="Год издания" name="publishYear">
+                    <input class="input__value" type="text" placeholder="Издательство" name="publishHouse">
+                    <input class="input__value" type="number" placeholder="Кол-во страниц" name="pagesNumber">
+                    <input class="input__value" type="text" placeholder="Жанры" name="genres">
+                    <input class="input__value" type="text" placeholder="Язык оригинала" name="originalLanguage">
+                    <button type="submit">Сохранить</button>
+                </form>
             </div>
         </div>
     </section>
     <section class="edit__page">
+        <button id="edit_btn">back</button>
         <div class="container">
             <div class="block__create">
                 <p>Edit book</p>
-                <div class="block__inputs">
-                    <input type="text" placeholder="Autor">
-                    <input type="text" placeholder="Name">
-                    <input type="text" placeholder="Description">
-                    <input type="text" placeholder="Year">
-                    <input type="text" placeholder="Genres">
-                    <input type="text" placeholder="Year">
-                    <input type="text" placeholder="Genres">
-                    <button>Сохранить</button>
-                    <button>Удалить</button>
-                </div>
+                <form class="block__inputs" id="edit-form">
+                    <input class="edit_input" type="text" placeholder="Название" required name="name">
+                    <input class="edit_input" type="text" placeholder="Автор" required name="author">
+                    <input class="edit_input" type="number" placeholder="Год издания" name="publishYear">
+                    <input class="edit_input" type="text" placeholder="Издательство" name="publishHouse">
+                    <input class="edit_input" type="number" placeholder="Кол-во страниц" name="pagesNumber">
+                    <input class="edit_input" type="text" placeholder="Жанры" name="genres">
+                    <input class="edit_input" type="text" placeholder="Язык оригинала" name="originalLanguage">
+                    <button type="submit" class="save">Сохранить</button>
+                </form>
             </div>
         </div>
-    </section> 
+    </section>
+    <div class="modal__delete">
+        <div class="modal__contet">
+            <p>Вы уверены, что хотите удалить?</p>
+            <div class="btns">
+                <button class="da">Да</button>
+                <button class="net">Нет</button>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -6,6 +6,7 @@
     position: absolute;
     top: 0;
     transform: translateY(-150%);
+
     // display: none;
     .user {
         position: absolute;
@@ -79,7 +80,7 @@
                     box-shadow: 0 2px 10px rgb(0, 255, 0);
                 }
 
-                
+
             }
 
             p {
@@ -109,6 +110,7 @@
             .block__deacr-title {
                 display: flex;
                 flex-direction: column;
+
                 p {
                     font-size: 40px;
                     font-weight: 700;
@@ -138,6 +140,7 @@
             .block__descr-btns {
                 display: flex;
                 width: 100%;
+                align-items: center;
                 gap: 25px;
                 justify-content: flex-end;
 
@@ -159,7 +162,32 @@
                     }
                 }
 
-                .favorite,
+                .favorite_icon {
+                    width: 40px;
+                    height: 40px;
+                    position: relative;
+                    .favorite {
+                        -webkit-appearance: none;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .favorite:checked + .favorite-label {
+                        background: url("../assets/img/favorite-Active.svg");
+                    }
+
+                    .favorite-label {
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        background-image: url('../assets/img/favorite.svg');
+                        background-size: cover;
+                    }
+                }
+
                 .trash {
                     width: 40px;
                     height: 40px;
@@ -185,28 +213,98 @@
 .anim_disable {
     transform: translateY(0%);
 }
+
+.modal__delete {
+    position: fixed;
+    z-index: 70;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+
+    .modal__contet {
+        padding: 30px 50px;
+        gap: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #28353e;
+        border: 3px solid rgb(0, 255, 0);
+        box-shadow: 0 0 30px rgb(0, 255, 0);
+        border-radius: 5px;
+        p {
+            font-size: 2vw;
+            color: white;
+        }
+        .btns {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            border: none;
+            .da {
+                width: 100px;
+                padding: 5px;
+                background-color: rgb(0, 255, 0);
+                border: 3px solid rgb(0, 255, 0);
+                box-shadow: 0 0 30px rgb(0, 255, 0);
+                border-radius: 5px;
+                font-size: 2vw;
+                color: white;
+                cursor: pointer;
+                transition: 0.4s;
+                &:hover {
+                    box-shadow: 0 0 30px rgb(15, 123, 15);
+                }
+            }
+            .net {
+                width: 100px;
+                padding: 5px;
+                background-color: red;
+                border: 3px solid red;
+                box-shadow: 0 0 30px red;
+                border-radius: 5px;
+                font-size: 2vw;
+                color: white;
+                cursor: pointer;
+                transition: 0.4s;
+                &:hover {
+                    box-shadow: 0 0 30px rgb(113, 26, 26);
+                }
+            }
+        }
+    }
+
+}
+
 @media(max-width:768px) {
     .description__book {
         .container {
             .block__deacr {
                 padding: 30px;
-    
+
                 .block__deacr-title {
                     p {
                         font-size: 30px;
                     }
-    
+
                     .title-author {
                         font-size: 22px;
                     }
                 }
-    
+
                 .block__deacr-descr {
                     p {
                         font-size: 22px;
                     }
                 }
-    
+
                 .block__descr-btns {
                     .btn__add {
                         width: 200px;
@@ -220,6 +318,7 @@
         }
     }
 }
+
 @media (max-width:500px) {
     .description__book {
         .user {
@@ -233,49 +332,55 @@
                 padding: 3px 8px;
             }
         }
+
         .container {
             .block__title {
                 margin-bottom: 30px;
                 gap: 10px;
-    
+
                 button {
                     font-size: 14px;
                 }
-    
+
                 p {
                     font-size: 24px;
                 }
             }
-    
+
             .block__deacr {
                 padding: 15px;
+
                 .block__deacr-title {
                     p {
                         font-size: 28px;
                     }
-    
+
                     .title-author {
                         font-size: 20px;
                     }
                 }
-    
+
                 .block__deacr-descr {
                     p {
                         font-size: 20px;
                     }
                 }
-    
+
                 .block__descr-btns {
                     align-items: center;
+
                     .btn__add {
                         width: 200px;
                         height: 35px;
                         background-color: #28353e;
                         border: 3px solid #28353e;
                         font-size: 16px;
-                    } .favorite,
+                    }
+
+                    .favorite,
                     .trash {
                         width: 45px;
+
                         svg {
                             width: 16px;
                             height: 16px;
@@ -285,5 +390,5 @@
             }
         }
     }
-    
+
 }

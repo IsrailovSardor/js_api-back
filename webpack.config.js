@@ -13,6 +13,7 @@ const PAGES = fs
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
+  devtool: "source-map",
   entry: './scripts/main.js',
   output: {
     filename: '[name].[hash].js',
