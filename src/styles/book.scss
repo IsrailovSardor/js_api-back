@@ -154,6 +154,7 @@
     
                         .favorite:checked+.favorite-label {
                             background: url("../assets/img/favorite-Active.svg");
+                            background-size: cover;
                         }
     
                         .favorite-label {
